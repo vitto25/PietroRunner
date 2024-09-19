@@ -33,29 +33,36 @@ body {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: red;
+    background-color: red; /* Rimuovila se non vuoi un colore di fallback */
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('pietro_image.jpg'); /* Sostituisci 'pietro_image.jpg' con il nome della tua immagine */
+    background-size: cover; /* Adatta l'immagine alla dimensione del cubo */
+    background-position: center; /* Centra l'immagine */
     color: white;
     font-weight: bold;
     font-family: Arial, sans-serif;
 }
 
 #pietro::before {
-    content: "Pietro";
+    content: "";
+    /* Ho rimosso la scritta "Pietro" poiché stiamo usando una foto */
 }
 
 #obstacle {
     position: absolute;
     width: 40px;
     height: 40px;
-    background-color: black;
+    background-color: black; /* Rimuovila se non vuoi un colore di fallback */
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('vigliacche_image.jpg'); /* Sostituisci 'vigliacche_image.jpg' con il nome della tua immagine per gli ostacoli */
+    background-size: cover; /* Adatta l'immagine alla dimensione del cubo */
+    background-position: center; /* Centra l'immagine */
     color: white;
     font-weight: bold;
     font-family: Arial, sans-serif;
@@ -63,9 +70,8 @@ body {
 }
 
 #obstacle::before {
-    content: "Vigliacche";
-    font-size: 10px;
-    text-align: center;
+    content: "";
+    /* Ho rimosso la scritta "Vigliacche" poiché stiamo usando una foto per gli ostacoli */
 }
 
 @keyframes moveObstacle {
